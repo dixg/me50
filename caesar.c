@@ -10,26 +10,35 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    int key = atoi(argv[1]);
     
-    while (key<0)
+    int k = atoi(argv[1]);
+    while (k<0)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
     
-    string plaintext = get_string("plaintext:  ");
-    int n =strlen(plaintext);
+    string s = get_string("plaintext:  ");
+    int n = strlen(s);
     printf("ciphertext: "); 
     
     for(int i=0; i<n; i++)
     {
-        int c = plaintext[i];
-        int result = c+key;
-        char char_result=result;
-        printf("%c", char_result); 
+       if (s[i] >= 'a' && s[i] <= 'z')
+            {
+                printf("%c", (((s[i] - 'a') + k) % 26) + 'a');
+            } 
+            else if (s[i] >= 'A' && s[i] <= 'Z')
+            {
+                printf("%c", (((s[i] - 'A') + k) % 26) + 'A'); 
+            }
+
+            else
+
+            {
+                printf("%c", s[i]);
+            }
     }
     
     printf("\n"); 
 }
-
