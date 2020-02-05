@@ -60,6 +60,7 @@ int main(int argc, char *argv[])
             
         }     
     }
+    printf("\n");
     ciphertext[plaintext_len] = '\0';  
 }   
 
