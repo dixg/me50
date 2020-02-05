@@ -42,7 +42,14 @@ int main(int argc, char *argv[])
 
         if (isalpha(plaintext[i]))
         {
+            if (plaintext[i] >= 97 && plaintext[i] <= 122)
+            {
             ciphertext[i] = (((shift(plaintext[i]) + shift(key[j])) % 26) + 97);
+            }
+            else if (plaintext[i] >= 65 && plaintext[i] <= 90)
+            {
+                ciphertext[i] = (((shift(plaintext[i]) + shift(key[j])) % 26) + 65);
+            } 
             j++;
             printf("%c", ciphertext[i]);
 
