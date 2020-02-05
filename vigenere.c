@@ -3,41 +3,82 @@
 #include <string.h>
 #include <stdlib.h>
 #include <ctype.h>
+#include <malloc.h> 
 
-int shift(char c);
+int shift(char c);    // Shift value function declaration
 
-int main(int argc, string argv[])
+int main(int argc, char *argv[]) 
 {
+    int i;
+    int j = 0; 
+
     if (argc != 2)
     {
         printf("Usage: ./vigenere keyword\n");
         return 1;
     }
     
-    //int k = atoi(argv[1]);
-    if (isdigit(atoi(argv[1]))) 
+    int n = strlen(argv[1]);  //initalized length of keyworb
+    char key[n];  //declared an array of char datatype
+     
+    for (i = 0; i < n; i++)
     {
-        printf("Usage: ./vigenere keyword\n");
-        return 1;
+        key[i] = argv[1][i];
+        if (isdigit(key[i])) 
+        {
+            printf("Usage: ./vigenere keyword\n");
+            return 1;
+        }
     }
-    
-    int key = shift(argv[1][0]);
-    printf("%i\n", key);
-    
-    //string s = get_string("plaintext:  ");
-    //int n = strlen(s);
+  
+    string plaintext = get_string("plaintext: ");
+    int plaintext_len = strlen(plaintext); 
+    //printf("plaintext_len = %d\n ", plaintext_len); 
+    char ciphertext[plaintext_len + 1];
     //printf("ciphertext: "); 
+   
+    for (i = 0; i < plaintext_len; i++)
+    {
 
-}
-    
-int shift(char c)
+        if (isalpha(plaintext[i]))
+        {
+            ciphertext[i] = (((shift(plaintext[i]) + shift(key[j])) % 26) + 97);
+            j++;
+            printf("%c", ciphertext[i]);
+
+            if (j == n)
+            {
+                j = 0;                                                                    
+            }
+            //j++;
+
+        }
+        else if (plaintext[i] == 32)
+        {
+            printf(" ");
+            continue;
+            
+        }     
+    }
+    printf("\n");
+    ciphertext[plaintext_len] = '\0';  
+}   
+
+int shift(char c)    //function defination
 { 
     int char_asci = c; 
     
-    if (char_asci >= 97 && char_asci <= 122)
+    if (char_asci >= 97 && char_asci <= 122)   //for lowercase alphabetes
     {
-        int key = char_asci - 97;
-        return key;
+        int test = char_asci - 97;
+        //printf("%d\n", test);
+        return test;
+    }
+    else if (char_asci >= 65 && char_asci <= 90)   //for uppercase alphabetes
+    {
+        int test = char_asci - 65;
+        //printf("%d\n", test);
+        return test;
     }
     else 
     {
@@ -45,5 +86,3 @@ int shift(char c)
     }
 }
      
-  
-
