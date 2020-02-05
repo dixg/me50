@@ -49,11 +49,8 @@ int main(int argc, char *argv[])
             else if (plaintext[i] >= 65 && plaintext[i] <= 90)
             {
                 ciphertext[i] = (((shift(plaintext[i]) + shift(key[j])) % 26) + 65);
-            } 
-            else if (plaintext[i] >= 33 && plaintext[i] <= 64)
-            {
-                ciphertext[i] = plaintext[i]
             }
+            
             j++;
             printf("%c", ciphertext[i]);
 
@@ -69,7 +66,11 @@ int main(int argc, char *argv[])
             printf(" ");
             continue;
             
-        }     
+        } 
+        else if (plaintext[i] >= 33 && plaintext[i] <= 64)
+        {
+            printf("%c",plaintext[i]);
+        }    
     }
     printf("\n");
     ciphertext[plaintext_len] = '\0';  
