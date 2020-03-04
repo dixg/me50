@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
                         if (strcmp(argv[1], crypt(a, salt1)) == 0)
                         {
                             //printf("Found it!");
-                            printf("%s", a);
+                            printf("%s\n", a);
                             return 0;
                         }
                 }
@@ -106,18 +106,18 @@ int main(int argc, char *argv[])
                             a[2]=k;
                             a[3]='\0';
                             
-                            printf("a[0]: %c ", a[0]);
-                            printf("a[1]: %c ", a[1]);
-                            printf("a[2]: %c ", a[2]);
-                            //printf("a[1]: %c ", a[3]);
+                            // printf("a[0]: %c ", a[0]);
+                            // printf("a[1]: %c ", a[1]);
+                            // printf("a[2]: %c ", a[2]);
+                            // //printf("a[1]: %c ", a[3]);
 
                             crypt(a, salt1);
-                            printf("%s\n",crypt(a, salt1));
+                            //printf("%s\n",crypt(a, salt1));
             
                             if (strcmp(argv[1], crypt(a, salt1)) == 0)
                             {
                                 //printf("Found it!");
-                                printf("%s", a);
+                                printf("%s\n", a);
                                 return 0;
                             }
                         }
@@ -161,7 +161,7 @@ int main(int argc, char *argv[])
                                            if (strcmp(argv[1], crypt(a, salt1)) == 0)
                                            {
                                                 //printf("Found it!");
-                                                printf("%s", a);
+                                                printf("%s\n", a);
                                                 return 0;
                                             }
                                 }
