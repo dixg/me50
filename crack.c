@@ -5,20 +5,20 @@
 #include <ctype.h>
 #include <crypt.h>
 
-//int isalpha1(int x);          // Function declaration to check parameter is alphabet char 
-int iscapital(int x);    // Function declaration to check parameter is capital char 
+//int isalpha1(int x);          // Function declaration to check parameter is alphabet char
+int iscapital(int x);    // Function declaration to check parameter is capital char
 int issmall(int x);     // Function declaration to check parameter is small char
 int salt(int argv[1]);
 
-int main(int argc, char *argv[]) 
+int main(int argc, char *argv[])
 {
     int x;
     int i;
     int j;
     int k;
-    int l; 
+    int l;
     int m;
-    int n; 
+    int n;
     int count=0;
     char a[6];
 
@@ -42,13 +42,13 @@ int main(int argc, char *argv[])
         {
             a[0]=j;
             a[1]='\0';
-            
+
             //printf("J= %d a[0]: %c \n", j, a[0]);
 
             crypt(a, salt1);
             //printf("%s\n",crypt(a, salt1));
              //printf("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-            
+
             if (strcmp(argv[1], crypt(a, salt1)) == 0)
             {
                  //printf("Found it!\n");
@@ -70,7 +70,7 @@ int main(int argc, char *argv[])
                         a[1]=i;
                         a[2]='\0';
 
-                        
+
                         // printf("a[0]: %c ", a[0]);
                         // printf("a[1]: %c ", a[1]);
                         //printf("a[1]: %c ", a[2]);
@@ -105,7 +105,7 @@ int main(int argc, char *argv[])
                             a[1]=i;
                             a[2]=k;
                             a[3]='\0';
-                            
+
                             // printf("a[0]: %c ", a[0]);
                             // printf("a[1]: %c ", a[1]);
                             // printf("a[2]: %c ", a[2]);
@@ -113,7 +113,7 @@ int main(int argc, char *argv[])
 
                             crypt(a, salt1);
                             //printf("%s\n",crypt(a, salt1));
-            
+
                             if (strcmp(argv[1], crypt(a, salt1)) == 0)
                             {
                                 //printf("Found it!");
@@ -148,7 +148,7 @@ int main(int argc, char *argv[])
                                             a[2]=k;
                                             a[3]=l;
                                             a[4]='\0';
-   
+
                                             // printf("a[0]: %c ", a[0]);
                                             // printf("a[1]: %c ", a[1]);
                                             // printf("a[2]: %c ", a[2]);
@@ -170,7 +170,7 @@ int main(int argc, char *argv[])
                     }
                 }
             }
-        }                                               
+        }
     }
 
 
@@ -208,7 +208,7 @@ int main(int argc, char *argv[])
                                                 // for(count=0; count<5; count++)
                                                 // {
                                                 //     printf("%c\n", a[count]);
-                                                // }      
+                                                // }
                                             // printf("a[0]: %c ", a[0]);
                                             // printf("a[1]: %c ", a[1]);
                                             // printf("a[2]: %c ", a[2]);
@@ -231,7 +231,7 @@ int main(int argc, char *argv[])
                     }
                 }
             }
-        }                                               
+        }
     }
 }
 }
@@ -276,12 +276,12 @@ int issmall(int x)
 // {
 //     int i;
 //     int s_arr[3];
-     
+
 //     for (i = 0; i < 2; i++)
 //     {
 //         s_arr[i] = argv[1][i];
 //         printf("S_arr[%d]= %d", i, s_arr[i] );
-        
+
 //         }
 //     }
 
