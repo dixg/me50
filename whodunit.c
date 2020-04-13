@@ -97,7 +97,6 @@ int main(int argc, char *argv[])
             fputc(0x00, outptr);
         }
     }
-
     // close infile
     fclose(inptr);
 
