@@ -68,7 +68,7 @@ bool load(const char *dictionary)
     // Insert words into hash table
      while (fscanf(file, "%s", word) != EOF)
     {
-        printf("%s\n",word);
+        //printf("%s\n",word);
         int hash_index = hash(word);
 
         node* n = malloc (sizeof(node));
@@ -126,6 +126,7 @@ unsigned int size(void)
 }
 
     int sizeofList(node* root )
+    
     {
         int count = 0;
         node* temp = root;
@@ -194,8 +195,8 @@ bool unload(void)
     {
         node* root = hashtable[i];
         node* current_temp = root;
-        
-        node* future_temp = current_temp->next; 
+
+        node* future_temp = current_temp->next;
 
             while(future_temp != NULL)
             {
@@ -204,9 +205,9 @@ bool unload(void)
                 current_temp = future_temp;
                 future_temp = future_temp->next;
             }
-           
+
             free(root);
         }
-       
+
         return true;
 }
