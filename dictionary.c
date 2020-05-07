@@ -126,7 +126,6 @@ unsigned int size(void)
 }
 
     int sizeofList(node* root )
-    
     {
         int count = 0;
         node* temp = root;
