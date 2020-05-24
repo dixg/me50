@@ -10,13 +10,10 @@ def main():
     for i in range(1, height + 1):
         num_hashes = i
         num_spaces = width - num_hashes
-
         print(" " * num_spaces, end="")
         print("#" * num_hashes, end="")
-
         print("  ", end="")
-
-        print("#" * num_hashes)
+        print()
 
 
 if __name__ == "__main__":
