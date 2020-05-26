@@ -2,11 +2,12 @@ from cs50 import get_float
 
 def main():
     
-    value = get_float("Change Owned: ")
 
-    if value < 0:
-        print("Change Owned: ", value)
+    value = get_float("Change Owned: ")
     
+    while value < 0:
+        value = get_float("Change Owned: ")
+
     cents = round(value*100)
 
     num_coins = 0
@@ -30,4 +31,4 @@ def main():
     print(" ",num_coins)
 
 if __name__ == "__main__":
-    main()
+    main() 
