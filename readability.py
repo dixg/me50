@@ -12,8 +12,7 @@ def main():
     t_sentence=0
     total_sentences=0
 
-   
-
+ 
     for i in range(0, len(text)):
         letter = text[i];
         #print(letter)
