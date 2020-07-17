@@ -1,0 +1,169 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    #myHeader
+    {
+      background-color: lightblue;
+      color: black;
+      padding: 40px;
+      text-align: center;
+    }
+   .background
+    {
+      background-color: rgba(255, 99, 71, 0.5);
+      color: white;
+      padding: 10px;
+    }
+    .big_div
+    {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      /*margin: 10px;*/
+      padding: 20px;
+    }
+    .styled
+    {
+      border: 0;
+      line-height: 2.5;
+      padding: 50 50 50px;
+      margin: 10px;
+      font-size: 1rem;
+      text-align: center;
+      color: #fff;
+      text-shadow: 1px 1px 1px #000;
+      border-radius: 10px;
+      background-color: rgba(220, 0, 0, 1);
+      background-image: linear-gradient(to top left,
+                                        rgba(0, 0, 0, .2),
+                                        rgba(0, 0, 0, .2) 30%,
+                                        rgba(0, 0, 0, 0));
+      box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                  inset -2px -2px 3px rgba(0, 0, 0, .6);
+    }
+    .small_div
+    {
+      background-color: white;
+      color: black;
+      border: 2px solid black;
+      margin: 10px;
+      padding: 20px;
+    }
+    .p1 {
+           /*list-style-type:disc*/
+            display:list-item;
+            list-style:disc inside;
+            padding:0 0 0 8px;
+            margin:0 0 0 8px;
+        }
+    nav
+    {
+      font-size: medium;
+    text-align: left;
+    color: #fff;
+    float: left;
+    width: 15%;
+    height: 400px;
+    background: rgb(134,212,218,0.2);
+    padding: 20px;
+      }
+
+    nav ul
+    {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    article
+    {
+      float: right;
+    padding: 6px;
+    width: 81%;
+    background-color: rgba(255, 99, 71, 0.2);
+    }
+    section:after
+    {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    footer
+    {
+      background-color: lightblue;
+      padding: 10px;
+      text-align: center;
+      color: black;
+    }
+
+
+    @media (max-width: 600px)
+    {
+      nav, article
+      {
+          width: 100%;
+          height: auto;
+      }
+    }
+</style>
+</head>
+
+<body data-gr-c-s-loaded="true">
+  <header>
+      <h1 id="myHeader"><a href="index1.html"><img src="dg.png" alt="CSGO Howl" style="position: relative; top:-19px; float:left; width: 80px; height: 80px;">CS50</h1>
+  </header>
+   
+  <section>
+  <nav>
+    <ul>
+      <li><a href="index1.html">Home</a></li>
+      <li><a href="index3.html">W3schools</a></li>
+      <li><a href="index4.html">Piller of strength</a></li>
+    </ul>
+  </nav>
+
+  <article>
+    <h2> What you'll learn  </h2>
+    <table style="width:100%">
+              <tbody><tr>
+                <td><a class="p1"> A broad and robust understanding of computer science and programming </a></td>
+                <td><p class="p1"> Familiarity in a number of languages, including C, PHP, and JavaScript plus SQL, CSS, and HTML </p></td>
+              </tr>
+              <tr>
+                <td><p class="p1">How to think algorithmically and solve programming problems efficiently</p></td>
+                <td><p class="p1">How to engage with a vibrant community of like-minded learners from all levels of experience</p></td>
+              </tr>
+              <tr>
+                <td><p class="p1">Concepts like abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development</p></td>
+                <td><p class="p1">How to develop and present a final programming project to your peers</p></td>
+              </tr>
+    </tbody></table>
+
+
+   <button class="styled" type="button">
+     <a href="https://www.edx.org/course/cs50s-introduction-to-computer-science" target="_blank">
+       TAKE COURSE
+       </a>
+    </button>
+    
+    <h2> Course description</h2>
+
+    <p>This is CS50x, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience.
+
+        An entry-level course taught by David J. Malan, CS50x teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, PHP, and JavaScript plus SQL, CSS, and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming.
+
+        As of Fall 2015, the on-campus version of CS50x, CS50, was Harvard's largest course.
+    </p>
+  </article>
+</section>
+
+  <footer>
+      <p>Footer</p>
+  </footer>
+
+
+</body>
+</html>
